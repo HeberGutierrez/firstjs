@@ -57,21 +57,27 @@ if (musicians <= 0) {
 /*EXCERSICE #8*/
 var room = "dining room";
 var suspect = "Mr. Parkes";
-var weapon = "knife";
-var solved = true;
+var weapon = "";
+var solved = false;
 
-if (weapon == "knife" && room == "dining room" && suspect == "Mr. Parkes") {
-  solved = true; console.log(suspect + " did it in the " + room + " with the " + weapon + "!");
-} else if (weapon == "poison" && room == "ballroom" && suspect == "Mr. Kalehoff") {
-  solved = true; console.log(suspect + " did it in the " + room + " with the " + weapon + "!");
-} else if (weapon == "trophy" && room == "gallery" && suspect == "Ms. Van Cleve") {
-  solved = true; console.log(suspect + " did it in the " + room + " with the " + weapon + "!");
-} else if (weapon == "pool stick" && room == "billiards room" && suspect == "Mrs. Sparr");{
-solved = true; console.log(suspect + " did it in the " + room + " with the " + weapon + "!");}
-else {
+if (room == "dining room" && suspect == "Mr. Parkes") {
+  weapon = "knife";
+  solved = true;
+} else if (room == "ballroom" && suspect == "Mr. Kalehoff") {
+  weapon = "poison";
+  solved = true;
+} else if (room == "gallery" && suspect == "Ms. Van Cleve") {
+  weapon = "trophy"
+  solved = true;
+} else if (room == "billiards room" && suspect == "Mrs. Sparr") {
+  weapon = "pool stick"
+  solved = true;
+} else {
   console.log("supect no founded");
 }
-
+if (solved) {
+  console.log(suspect + " did it in the " + room + " with the " + weapon + "!");
+}
 
 
 
@@ -86,9 +92,12 @@ var checkBalance = true;
 var isActive = false;
 
 // your code goes here
-if (balance >= 0 && checkBalance === true) {isActive = true; console.log("Your balance is$ "+balance.toFixed(2)+".");
-}else if (balance < 0 && checkBalance === true && isActive === false) {console.log("Your account is negative. Please contact the bank.");}
-else {
+if (balance >= 0 && checkBalance === true) {
+  isActive = true;
+  console.log("Your balance is$ " + balance.toFixed(2) + ".");
+} else if (balance < 0 && checkBalance === true && isActive === false) {
+  console.log("Your account is negative. Please contact the bank.");
+} else {
   console.log("Thank you!, Have a nice day.");
 }
 
@@ -117,8 +126,9 @@ var flavor = "strawberry";
 var vessel = "bowl";
 var toppings = "sprinkles";
 // Add your code here
-if ((flavor === "vanilla" || flavor === "chocolate") && (vessel === "cone" || vessel === "bowl") && (toppings === "sprinkles" || toppings === "peanuts")){console.log("I'd like two scoops of "+flavor+" ice cream in a "+vessel+" with "+toppings+".");}
-else console.log("thats mixed are not avalible");
+if ((flavor === "vanilla" || flavor === "chocolate") && (vessel === "cone" || vessel === "bowl") && (toppings === "sprinkles" || toppings === "peanuts")) {
+  console.log("I'd like two scoops of " + flavor + " ice cream in a " + vessel + " with " + toppings + ".");
+} else console.log("thats mixed are not avalible");
 
 
 /*EXCERSICE #14*/
@@ -132,13 +142,19 @@ var shirtLength = 30;
 var shirtSleeve = 8.71;
 
 // your code goes here
-if (shirtWidth === 18, shirtLength === 28 && shirtSleeve === 8.13) {console.log("Size 'S'");}
-else if (shirtWidth === 20, shirtLength === 29 && shirtSleeve === 8.38) {console.log("Size 'M'");}
-else if (shirtWidth === 22, shirtLength === 30 && shirtSleeve === 8.63) {console.log("Size 'L'");}
-else if (shirtWidth === 24, shirtLength === 31 && shirtSleeve === 8.88) {console.log("Size 'XL'");}
-else if (shirtWidth === 26, shirtLength === 33 && shirtSleeve === 9.63) {console.log("Size '2XL'");}
-else if (shirtWidth === 28, shirtLength === 34 && shirtSleeve === 10.13) {console.log("Size '3XL'");}
-else {
+if (shirtWidth === 18, shirtLength === 28 && shirtSleeve === 8.13) {
+  console.log("Size 'S'");
+} else if (shirtWidth === 20, shirtLength === 29 && shirtSleeve === 8.38) {
+  console.log("Size 'M'");
+} else if (shirtWidth === 22, shirtLength === 30 && shirtSleeve === 8.63) {
+  console.log("Size 'L'");
+} else if (shirtWidth === 24, shirtLength === 31 && shirtSleeve === 8.88) {
+  console.log("Size 'XL'");
+} else if (shirtWidth === 26, shirtLength === 33 && shirtSleeve === 9.63) {
+  console.log("Size '2XL'");
+} else if (shirtWidth === 28, shirtLength === 34 && shirtSleeve === 10.13) {
+  console.log("Size '3XL'");
+} else {
   console.log("N/A");
 }
 
@@ -151,7 +167,9 @@ var color = isGoing ? "green" : "red";
 console.log(color);
 
 //ternary operation
-conditional ? (if condition is true) : (if condition is false)
+conditional ? (
+  if condition is true) : (
+  if condition is false)
 
 var color = isGoing ? "green" : "red";
 
@@ -160,6 +178,13 @@ var adult = true;
 var preorder = true;
 
 console.log("It costs $" + (adult ? "40.00" : "20.00") + " to attend the concert. Pick up your tickets at the " + (preorder ? "will call" : "the gate") + ".");
+
+//multiple TERNARY
+var condition1 = true,
+  condition2 = false,
+  access = condition1 ? (condition2 ? "true true" : "true false") : (condition2 ? "false true" : "false false");
+
+console.log(access); // logs "true false"
 
 //EXERCISE #18
 
@@ -181,5 +206,219 @@ console.log("It costs $" + (adult ? "40.00" : "20.00") + " to attend the concert
 var eatsPlants = false;
 var eatsAnimals = true;
 
-var category =  eatsAnimals ? (eatsPlants ? "omnivore" : "herbivore") : eatAnimals ? "carnivore" : " ";
+var category = eatsPlants ? eatsAnimals ? "omnivore" : "herbivore" : eatsAnimals ? "carnivore" : "Undefined";
 console.log(category);
+
+
+
+/*switch */
+
+switch (expression) {
+  case value1:
+    //Statements executed when the
+    //result of expression matches value1
+    [
+      break;
+    ]
+  case value2:
+    //Statements executed when the
+    //result of expression matches value2
+    [
+      break;
+    ]
+    ...
+  case valueN:
+    //Statements executed when the
+    //result of expression matches valueN
+    [
+      break;
+    ]
+    [
+      default:
+      //Statements executed when none of
+      //the values match the value of the expression
+      [
+        break;
+      ]
+    ]
+}
+//another example
+switch (expr) {
+  case 'Oranges':
+    console.log('Oranges are $0.59 a pound.');
+    break;
+  case 'Apples':
+    console.log('Apples are $0.32 a pound.');
+    break;
+  case 'Bananas':
+    console.log('Bananas are $0.48 a pound.');
+    break;
+  case 'Cherries':
+    console.log('Cherries are $3.00 a pound.');
+    break;
+  case 'Mangoes':
+  case 'Papayas':
+    console.log('Mangoes and papayas are $2.79 a pound.');
+    break;
+  default:
+    console.log('Sorry, we are out of ' + expr + '.');
+}
+
+console.log("Is there anything else you'd like?");
+
+/*OTRHER CASE*/
+
+if (option === 1) {
+  console.log("You selected option 1.");
+} else if (option === 2) {
+  console.log("You selected option 2.");
+} else if (option === 3) {
+  console.log("You selected option 3.");
+} else if (option === 4) {
+  console.log("You selected option 4.");
+} else if (option === 5) {
+  console.log("You selected option 5.");
+} else if (option === 6) {
+  console.log("You selected option 6.");
+}
+var option = 3;
+
+switch (option) {
+  case 1:
+    console.log("You selected option 1.");
+    break;
+  case 2:
+    console.log("You selected option 2.");
+    break;
+  case 3:
+    console.log("You selected option 3.");
+    break;
+  case 4:
+    console.log("You selected option 4.");
+    break;
+  case 5:
+    console.log("You selected option 5.");
+    break;
+  case 6:
+    console.log("You selected option 6.");
+    break; // technically, not needed
+}
+
+
+/*EXCERSICE 21 */
+/*
+ * Programming Quiz: Back to School (3-9)
+ */
+
+// change the value of `education` to test your code
+var education = "no high school diploma";
+
+// set the value of this based on a person's education
+var salary;
+
+// your code goes here
+switch (education) {
+  case "no high school diploma":
+    salary = 25636, console.log("In 2015, a person with " + education + " earned an average of " + salary + "/year.");
+    break;
+  case "a high school diploma":
+    salary = 35256, console.log("In 2015, a person with " + education + " earned an average of " + salary + "/year.");
+    break;
+  case "an Associate's degree":
+    salary = 41496, console.log("In 2015, a person with " + education + " earned an average of " + salary + "/year.");
+    break;
+  case "a Bachelor's degree":
+    salary = 59124, console.log("In 2015, a person with " + education + " earned an average of " + salary + "/year.");
+    break;
+  case "a Master's degree":
+    salary = 69732, console.log("In 2015, a person with " + education + " earned an average of " + salary + "/year.");
+    break;
+  case "a Professional degree":
+    salary = 89960, console.log("In 2015, a person with " + education + " earned an average of " + salary + "/year.");
+    break;
+  case "a Doctoral degree":
+    salary = 89960, console.log("In 2015, a person with " + education + " earned an average of " + salary + "/year.");
+    break;
+}
+
+
+/*LOOPS*/
+
+//while loop
+var start = 0; // when to start
+while (start < 10) { // when to stop
+  console.log(start);
+  start = start + 2; // how to get to the next item
+}
+
+}
+/*
+ * Programming Quiz: JuliaJames (4-1)
+ */
+var x = 1;
+
+while (x <= 20) {
+  if (x % 3 === 0 && x % 5 === 0) {
+    console.log("JuliaJames");
+  } else if (x % 5 === 0) {
+    console.log("James");
+  } else if (x % 3) {
+    console.log("Julia");
+  } else {
+    console.log(x);
+  }
+  x++;
+}
+
+
+/*
+ * Programming Quiz: 99 Bottles of Juice (4-2)
+ *
+ * Use the following `while` loop to write out the song "99 bottles of juice".
+ * Log the your lyrics to the console.
+ *
+ * Note
+ *   - Each line of the lyrics needs to be logged to the same line.
+ *   - The pluralization of the word "bottle" changes from "2 bottles" to "1 bottle" to "0 bottles".
+ */
+
+ var num = 99;
+
+ while (num<=num && num>=1) {
+   if (num != 1) {
+     console.log(num + " bottles of juice on the wall! " + num + " bottles of juice! Take one down, pass it around... "+ num + " bottles of juice on the wall!" );
+     num--;
+   }else {
+     console.log(num + " bottle of juice on the wall! " + num + " bottle of juice! Take one down, pass it around... "+ num + " bottle of juice on the wall!" );
+     num--;
+   }
+  }
+
+
+  /*
+   * Programming Quiz: Countdown, Liftoff! (4-3)
+   *
+   * Using a while loop, print out the countdown output above.
+   */
+
+  // your code goes here
+
+var countdown = 60;
+
+while (countdown >=0) {
+  if (countdown === 50) {console.log("T-"+countdown+" seconds" +" Orbiter transfers from ground to internal power " );}
+      else if (countdown === 31) {console.log(" Ground launch sequencer is go for auto sequence start T-"+ countdown + " seconds");}
+      else if (countdown === 16) {console.log("Activate launch pad sound suppression system T-"+ countdown + " seconds");}
+      else if (countdown === 10) {console.log("Activate main engine hydrogen burnoff system T-"+ countdown + " seconds");}
+      else if (countdown === 6) {console.log("Main engine start T-"+ countdown + " seconds");}
+      else if (countdown === 0) {console.log("Solid rocket booster ignition and liftoff! T-"+ countdown + " seconds");}
+
+  countdown--;
+  console.log("T-"+countdown+" seconds" );
+}
+
+
+//FOR
+
+var x = 9;
+for (x >= 1; x >= 0; x--) {console.log("hello " + x);}
