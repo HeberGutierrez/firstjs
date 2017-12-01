@@ -403,20 +403,26 @@ while (x <= 20) {
 
   // your code goes here
 
-var countdown = 60;
+  var countdown = 60;
 
-while (countdown >=0) {
-  if (countdown === 50) {console.log("T-"+countdown+" seconds" +" Orbiter transfers from ground to internal power " );}
-      else if (countdown === 31) {console.log(" Ground launch sequencer is go for auto sequence start T-"+ countdown + " seconds");}
-      else if (countdown === 16) {console.log("Activate launch pad sound suppression system T-"+ countdown + " seconds");}
-      else if (countdown === 10) {console.log("Activate main engine hydrogen burnoff system T-"+ countdown + " seconds");}
-      else if (countdown === 6) {console.log("Main engine start T-"+ countdown + " seconds");}
-      else if (countdown === 0) {console.log("Solid rocket booster ignition and liftoff! T-"+ countdown + " seconds");}
-
-  countdown--;
-  console.log("T-"+countdown+" seconds" );
-}
-
+    while (countdown >= 0){
+      if (second === 50) {
+        console.log("T-50 Orbiter transfers from ground to internal power");
+      } else if (countdown === 31) {
+        console.log("T-31 Ground launch sequencer is go for auto sequence start");
+      } else if (countdown === 16) {
+        console.log("T-16 Activate launch pad sound suppression system");
+      } else if (countdown === 10) {
+        console.log("T-10 Activate main engine hydrogen burnoff system");
+      } else if (countdown === 6) {
+        console.log("T-6 Main engine start");
+      } else if (countdown === 0) {
+        console.log("T-0 Solid rocket booster ignition and liftoff!");
+      } else {
+        console.log("T-" + countdown + " seconds");
+      }
+      countdown--;
+    }
 
 //FOR
 
