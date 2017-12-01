@@ -352,23 +352,20 @@ while (start < 10) { // when to stop
 }
 
 }
+
 /*
  * Programming Quiz: JuliaJames (4-1)
  */
+
 var x = 1;
 
 while (x <= 20) {
-  if (x % 3 === 0 && x % 5 === 0) {
-    console.log("JuliaJames");
-  } else if (x % 5 === 0) {
-    console.log("James");
-  } else if (x % 3) {
-    console.log("Julia");
-  } else {
-    console.log(x);
-  }
+  if (x % 3 === 0 && x % 5 === 0) {console.log("JuliaJames");}
+  else if (x % 5 === 0) {console.log("James");}
+  else if (x % 3 === 0) {console.log("Julia");}
+  else {console.log(x);}
   x++;
-}
+  }
 
 
 /*
@@ -405,8 +402,8 @@ while (x <= 20) {
 
   var countdown = 60;
 
-    while (countdown >= 0){
-      if (second === 50) {
+   while (countdown >= 0){
+      if (countdown === 50) {
         console.log("T-50 Orbiter transfers from ground to internal power");
       } else if (countdown === 31) {
         console.log("T-31 Ground launch sequencer is go for auto sequence start");
@@ -425,6 +422,21 @@ while (x <= 20) {
     }
 
 //FOR
+//FACTORIALS
+/*
+ * Programming Quiz: Factorials (4-7)
+ */
+
+// your code goes here
+var num = 12;
+var solution = 1;
+
+for (var x = num; x > 0; x--) {
+    solution *= x;
+}
+console.log(solution);
+
+/*other*/
 
 var x = 9;
 for (x >= 1; x >= 0; x--) {console.log("hello " + x);}
